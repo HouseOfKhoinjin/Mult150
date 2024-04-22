@@ -10,13 +10,13 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public GoalScript blue, green, red, orange;
+    public GoalScript blue, chaos, green, red, orange;
     private bool isGameOver = true;
 
     // Update is called once per frame
     void Update()
     {
-        isGameOver = blue.isSolved && green.isSolved && red.isSolved && orange.isSolved;
+        isGameOver = blue.isSolved && chaos.isSolved && green.isSolved && red.isSolved && orange.isSolved;
     }
 
     void OnGUI()

@@ -16,4 +16,24 @@
  
     A:  I find it fun using the chaos balls to knock the normal balls into the goal. However, the normal speeds feel a bit too slow, because I always end up missing the balls by an inch
  
+--- PATCH NOTES ---
+
+ - increased walking speed by 10
+
+ - "removed" running speed since balls seemingly went through the bumper
+
+ - decreased velocity of normal balls by 10
+ 
+ - decreased velocity of chaos balls by 25
+ 
+ - added a music track to the game that fits the "tropical setting" (track is called "Treasure Trove Cove" from Super Smash Bros Ultimate
+
+ -- size of bumper edited so that it looks more like a square
+
+ -- added a goal for a chaos ball to go into (was sadly not able to put all of them in there
+
+ -- changed the footsteps into one that sounds like you're walking on sand (was not able to increase the volume)
+
+-- added terrain to cover up most of the ocean bits outside of the arena
+ 
  */
