@@ -24,7 +24,7 @@ What 2 parts of the game are fun?
 
 What 2 parts of the game are tedious?
  
-1. it's weird that your touching power ups don't seem to do anything so far
+1. The timer number is off balance and that bothers me so much more than it should
 2. I wish there was a way to turn off the hologram/phaseout mat after you press it
  
 Changes: 
