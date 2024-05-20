@@ -50,12 +50,12 @@ public class GameManager : MonoBehaviour
 
     void OnGUI()
     {
-        if (isGameOver)
+        if (!isGameOver)
         {
             Rect boxRect = new Rect(Screen.width / 2 - 50, Screen.height - 100, 100, 50);
             GUI.Box(boxRect, "Time Remaining");
 
-            Rect labelRect = new Rect(Screen.width / 2 - 10, Screen.height / 2 - 80, 20, 40);
+            Rect labelRect = new Rect(Screen.width / 2 - 10, Screen.height - 80, 20, 40);
             GUI.Label(labelRect, ((int)gameTime).ToString());
         }
         
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         {
             Rect boxRect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 100, 120, 50);
             GUI.Box(boxRect, "Game Over");
-            Rect labelRect = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 80, 90, 40);
+            Rect labelRect = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 90, 90, 40);
             GUI.Label(labelRect, "Total Time: " + (int)totalTimeElapsed);
 
             Time.timeScale = 0;
