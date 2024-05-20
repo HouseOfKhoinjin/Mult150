@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         {
             SlowWorldDown();
         }
+    }
 
     void SlowWorldDown()
     {
@@ -57,7 +58,8 @@ public class GameManager : MonoBehaviour
             Rect labelRect = new Rect(Screen.width / 2 - 10, Screen.height / 2 - 80, 20, 40);
             GUI.Label(labelRect, ((int)gameTime).ToString());
         }
-    else
+        
+        else
         {
             Rect boxRect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 100, 120, 50);
             GUI.Box(boxRect, "Game Over");
@@ -67,5 +69,5 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-    }
+
 }
