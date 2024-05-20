@@ -19,7 +19,7 @@ public class TextureScroller : MonoBehaviour
     void Update()
     {
         // increase offset based by time
-        offset += Time.deltaTime + speed;
+        offset += Time.deltaTime * speed;
         
         //keep offset at 1
         if (offset > 1)

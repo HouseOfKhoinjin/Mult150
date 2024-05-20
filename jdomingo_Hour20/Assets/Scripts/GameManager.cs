@@ -35,37 +35,37 @@ public class GameManager : MonoBehaviour
             SlowWorldDown();
         }
 
-        void SlowWorldDown()
+    void SlowWorldDown()
+    {
+        CancelInvoke();
+        Time.timeScale = 0.5f;
+        Invoke("SpeedWorldUp", 1);
+    }
+
+    void SpeedWorldUp()
+    {
+        Time.timeScale = 1f;
+    }
+
+    void OnGUI()
+    {
+        if (isGameOver)
         {
-            CancelInvoke();
-            Time.timeScale = 0.5f;
-            Invoke("SpeedWorldUp", 1);
-        }
+            Rect boxRect = new Rect(Screen.width / 2 - 50, Screen.height - 100, 100, 50);
+            GUI.Box(boxRect, "Time Remaining");
 
-        void SpeedWorldUp()
+            Rect labelRect = new Rect(Screen.width / 2 - 10, Screen.height / 2 - 80, 20, 40);
+            GUI.Label(labelRect, ((int)gameTime).ToString());
+        }
+    else
         {
-            Time.timeScale = 1f;
+            Rect boxRect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 100, 120, 50);
+            GUI.Box(boxRect, "Game Over");
+            Rect labelRect = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 80, 90, 40);
+            GUI.Label(labelRect, "Total Time: " + (int)totalTimeElapsed);
+
+            Time.timeScale = 0;
         }
-
-        void OnGUI()
-        {
-            if (isGameOver)
-            {
-                Rect boxRect = new Rect(Screen.width / 2 - 50, Screen.height - 100, 100, 50);
-                GUI.Box(boxRect, "Time Remaining");
-
-                Rect labelRect = new Rect(Screen.width / 2 - 10, Screen.height / 2 - 80, 20, 40);
-                GUI.Label(labelRect, ((int)gameTime).ToString());
-            }
-            else
-            {
-                Rect boxRect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 100, 120, 50);
-                GUI.Box(boxRect, "Game Over");
-                Rect labelRect = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 80, 90, 40);
-                GUI.Label(labelRect, "Total Time: " + (int)totalTimeElapsed);
-
-                Time.timeScale = 0;
-            }
-        }
+    }
     }
 }
